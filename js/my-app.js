@@ -19,11 +19,14 @@ var myApp = new Framework7({
 // Export selectors engine
 var $$ = Dom7;
 
+
+
 // Add view
 var mainView = myApp.addView('.view-main', {
     // Because we use fixed-through navbar we can enable dynamic navbar
     dynamicNavbar: true,
     animatePages:false
+    //swipeBackPage:false
 });
 
 // Callbacks to run specific code for specific pages, for example for About page:
@@ -35,6 +38,7 @@ myApp.onPageInit('about', function (page) {
 //加载内页
 $$(document).on('pageInit', function (e) {
     var page = e.detail.page;
+    $$('.views').show();
             
 
     if (mainView.params.animatePages == false) {
@@ -42,16 +46,19 @@ $$(document).on('pageInit', function (e) {
     }
     // Code for home page
     if (page.name === 'home') {     
-        
+      $$('.toolbar').show();
     }
     // Code for login page
     if (page.name === 'login') {
         //myApp.alert('Here comes our services!');
+        $$('.toolbar').hide();
     }
 });
 
 //预加载某页
 mainView.router.loadPage('login.html');
+
+
 
 
 
