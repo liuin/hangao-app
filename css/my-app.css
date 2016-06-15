@@ -30,10 +30,12 @@ i.icon.icon-form-password {background: url("../img/icon-bk.png") 4px -140px no-r
 .icon-my {background: url("../img/ft-icon.png") -531px -60px no-repeat;}
 
 /*--  loginpage --*/
-.page-login .navbar{display:none;}
-.page-login .page-content {padding-bottom: 0;}
+[data-page="login"] .navbar{display:none;}
+.page-login .page-content {padding-bottom: 0;   padding-top: 0;}
 .page-login .tophd {background:url("../img/login-bg.jpg") center 0 no-repeat #000;background-size:100% auto;text-align:center; -webkit-box-align: center;-moz-box-align:center;box-align: center;}
 .page-login .tophd img {display:block;margin: 0 auto;}
+
+.page-login .list-block {margin-top: 15px; }
 
 .page-login .item-content-password .sp1 {display: block;background: #e8e8e8;padding: 0 5px;width: 67px;text-align: center;line-height: 30px;border-radius: 5px;font-size: 14px;margin-right: 5px;margin-left: 5px;white-space:normal;word-wrap:break-word;word-break:break-all;}
 
@@ -47,6 +49,11 @@ i.icon.icon-form-password {background: url("../img/icon-bk.png") 4px -140px no-r
 
 /*-- formlogin --*/
 .formlogin {padding: 0 30px;box-sizing: border-box;}
+
+/*-- regpage --*/
+[data-page="reg"] .navbar{display:none;}
+
+[data-page="reg"] .item-content-valcode .sp1 {display: block;background: #e8e8e8;padding: 0 5px;width: 100px;text-align: center;line-height: 30px;border-radius: 5px;font-size: 14px;margin-right: 5px;margin-left: 5px;white-space:normal;word-wrap:break-word;word-break:break-all;}
 
 /*-- toolbar --*/
 .toolbar {height: 76px;background:#fff;padding-top: 10px;padding-bottom: 0;padding-left: 0;padding-right: 0;}
