@@ -31,6 +31,14 @@ var mainView = myApp.addView('.view-main', {
 
 // Callbacks to run specific code for specific pages, for example for About page:
 
+// Show/hide preloader for remote ajax loaded pages
+// Probably should be removed on a production/local app
+$$(document).on('ajaxStart', function (e) {
+    myApp.showIndicator();
+});
+$$(document).on('ajaxComplete', function () {
+    myApp.hideIndicator();
+});
 
 
 //加载内页
